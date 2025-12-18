@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #cce0ff;
+}
+
+header {
+    width: 100%;
+    background: #b400b9;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.logo {
+    color: #00ff7f;
+    font-size: 28px;
+    margin: 0;
+}
+
+.buscador input {
+    padding: 8px;
+    width: 180px;
+}
+
+.buscador button {
+    padding: 8px 12px;
+    background: #00c943;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.fondo {
+    background: url("https://i.ibb.co/9s8wWZZ/blue.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    filter: blur(0px);
+}
+
+.login-box {
+    width: 320px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #0004;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.btn-enviar {
+    width: 100%;
+    background: orange;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-empresa {
+    width: 100%;
+    padding: 10px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-box a {
+    color: red;
+    text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.git
+.gitignore
+.vscode/
+node_modules/
+*.log
+Thumbs.db
+.DS_Store
+__pycache__/
+*.swp
+.env
+/*.md

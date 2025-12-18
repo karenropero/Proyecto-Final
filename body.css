@@ -1,0 +1,185 @@
+body {
+    background-image: url('imagenes/compumaxi2.jpg');
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    background-color: darkblue;
+}
+
+nav {
+    margin-bottom: 20px;
+    transition: text-shadow 0.3s ease;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff;
+}
+
+#search-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10PX 20PX;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+nav {
+
+    margin-bottom: 20px;
+}
+
+fieldset {
+    background-color: aquamarine;
+}
+
+fieldset {
+
+    text-decoration: none;
+    font: 16px verdana;
+    display: block;
+    background: aquamarine;
+    margin-bottom: 10px;
+    padding: 10px 20px 10px 50px;
+    border-radius: 15px;
+    transition: background 0.6s, margin-left 0.6s, margin-right 0.6s;
+    -webkit-transition: background 0.6s, margin-left 0.6s, margin-right 0.6s;
+    -moz-transition: background 0.6s, margin-left 0.6s, margin-right 0.6s;
+    -o-transition: background 0.6s, margin-left 0.6s, margin-right 0.6s;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+.menu>li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu>li>a:hover {
+    background-color: #575757;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #333;
+}
+
+.submenu>li>a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu>li>a:hover {
+    background-color: #575757;
+}
+
+.menu>li:hover>.submenu {
+    display: block;
+}
+
+.submenu .submenu {
+    top: 0;
+    left: 100%;
+    margin-top: -10px;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#boton-siga-leyendo {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#boton-siga-leyendo:hover {
+    background-color: #3e8e41;
+}
+
+#texto-desplegable {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#morecss-trigger-toggle {
+    cursor: pointer;
+}
+
+#morecss-element-toggle {
+    display: none;
+}
+
+#morecss-element-toggle:not(:checked)~#morecss-toggled-element {
+    display: none;
+}
+
+#morecss-element-toggle:not(:checked)~#morecss-trigger-toggle .lesslink {
+    display: none;
+}
+
+#morecss-element-toggle:checked~#morecss-abstract {
+    display: none;
+}
+
+#morecss-element-toggle:checked~#morecss-trigger-toggle .morelink {
+    display: none;
+}
+
+#morecss .morelink,
+#morecss .lesslink {
+    display: block;
+    cursor: pointer;
+    color: #2196f3;
+}
+
+#morecss .morelink:hover,
+#morecss .lesslink:hover {
+    text-decoration: underline;
+}
+
+#info{
+    background-color: #575757;
+}
+.tecnologias{
+     background-color: #575757;
+}

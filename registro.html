@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Compumaxi</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <h1>COMPUMAXI.COM</h1>
+    </header>
+
+    <!-- Buscador -->
+    <div class="buscador">
+        <input type="text" placeholder="buscar en compumaxi">
+        <button>Buscar</button>
+        <img src="logo.png" class="logo">
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="contenedor">
+
+        <!-- FORMULARIO DE REGISTRO -->
+        <div class="formulario">
+            <h2>crear cuenta</h2>
+
+            <form action="registro.php" method="POST">
+
+                <div class="fila">
+                    <input type="text" name="nombre" placeholder="nombre" required>
+                    <input type="text" name="apellidos" placeholder="apellidos" required>
+                </div>
+
+                <div class="fila">
+                    <input type="password" name="contrasena" placeholder="contraseña" required>
+                    <input type="text" name="telefono" placeholder="telefono" required>
+                </div>
+
+                <input type="email" name="correo" class="correo" placeholder="correo electrónico" required>
+
+                <p class="titulo-opciones">otras opciones</p>
+
+                <a href="#" class="link">seguimiento de envíos</a><br>
+                <a href="#" class="link">registrarte como empresa</a>
+
+                <button type="submit" class="btn-enviar">enviar</button>
+            </form>
+        </div>
+
+        <!-- BENEFICIOS -->
+        <div class="beneficios">
+            <h2>beneficios de compumaxi</h2>
+
+            <div class="benef-item"><span>🔔</span> resivir notificaciones</div>
+            <div class="benef-item"><span>💸</span> compras online</div>
+            <div class="benef-item"><span>⭐</span> usuarios más importantes</div>
+            <div class="benef-item"><span>🎁</span> promociones</div>
+        </div>
+    </div>
+
+</body>
+</html>

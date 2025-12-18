@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("fondo.jpg");
+    background-size: cover;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    background: #9d00b3;
+    text-align: center;
+    padding: 15px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #00ff5e;
+}
+
+/* BUSCADOR */
+.buscador {
+    background: black;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.buscador input {
+    width: 250px;
+    padding: 8px;
+    border: none;
+}
+.buscador button {
+    padding: 8px 20px;
+    background: #1fa73a;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.logo {
+    width: 90px;
+    margin-left: auto;
+}
+
+/* CONTENIDO */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    backdrop-filter: blur(3px);
+}
+
+/* FORMULARIO */
+.formulario {
+    background: rgba(150, 150, 150, 0.5);
+    padding: 20px;
+    width: 450px;
+}
+.formulario h2 {
+    text-align: center;
+    background: white;
+    color: black;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 5px 20px;
+}
+
+.fila {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.fila input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: whitesmoke;
+}
+
+.correo {
+    width: 100%;
+    padding: 10px;
+    background: whitesmoke;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.titulo-opciones {
+    margin: 0;
+    font-weight: bold;
+    color: black;
+}
+
+.link {
+    color: red;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.btn-enviar {
+    width: 200px;
+    background: #1fa73a;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+/* BENEFICIOS */
+.beneficios {
+    width: 350px;
+    background: rgba(150, 150, 150, 0.5);
+    padding: 20px;
+}
+
+.beneficios h2 {
+    text-align: center;
+    background: white;
+    color: black;
+    width: fit-content;
+    margin: auto;
+    padding: 5px 20px;
+}
+
+.benef-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 10px;
+    margin: 15px 0;
+    font-weight: bold;
+    gap: 10px;
+}
+.benef-item span {
+    font-size: 25px;
+}

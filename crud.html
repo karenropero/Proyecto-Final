@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compumaxi - CRUD Usuarios</title>
+
+    <!-- Archivo CSS externo -->
+    <link rel="stylesheet" href="crud.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>COMPUMAXI.COM</h1>
+    </header>
+
+    <!-- BUSCADOR -->
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="buscar en compumaxi">
+        <button class="btn-search" onclick="buscarUsuario()">Buscar</button>
+    </section>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+
+        <div class="top-bar">
+            <h2>Lista de usuario</h2>
+            <button class="btn-add" onclick="agregarUsuario()">Agregar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo o email</th>
+                    <th>N° telefono</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaUsuarios"></tbody>
+        </table>
+
+    </div>
+
+
+<!-- ============================= -->
+<!--      JAVASCRIPT AQUÍ         -->
+<!-- ============================= -->
+
+<script>
+// --------------------------
+//   "BASE DE DATOS" TEMPORAL
+// --------------------------
+let usuarios = [
+    {nombre:"yorgel", apellido:"lara", correo:"yorgelyoumaco@gmail.com", telefono:"3132527744"},
+    {nombre:"tatiana", apellido:"tique", correo:"tatianavargastique@gmail.com", telefono:"3145246913"},
+    {nombre:"esteban", apellido:"peña", correo:"estebinholara@gmail.com", telefono:"3108090576"},
+    {nombre:"joel", apellido:"gonzalez", correo:"jowelldlara@gmail.com", telefono:"3222254501"},
+    {nombre:"wilson", apellido:"vergel", correo:"wilsonvayonavergel@gmail.com", telefono:"3108090576"},
+    {nombre:"diana", apellido:"rivero", correo:"dianarivero12@gmail.com", telefono:"3205698945"},
+    {nombre:"mercedes", apellido:"vargas", correo:"mercedesvargasrodriguez@gmail.com", telefono:"3142580320"}
+    
+];
+
+
+// --------------------------
+//   MOSTRAR TABLA
+// --------------------------
+function mostrarTabla(lista = usuarios) {
+    let tabla = document.getElementById("tablaUsuarios");
+    tabla.innerHTML = "";
+
+    lista.forEach((u, index) => {
+        tabla.innerHTML += `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${u.nombre}</td>
+                <td>${u.apellido}</td>
+                <td>${u.correo}</td>
+                <td>${u.telefono}</td>
+                <td>
+                    <button class="btn-edit" onclick="modificarUsuario(${index})">modificar</button>
+                    <button class="btn-delete" onclick="eliminarUsuario(${index})">eliminar</button>
+                </td>
+            </tr>
+        `;
+    });
+}
+
+mostrarTabla();
+
+
+// --------------------------
+//       BUSCAR
+// --------------------------
+function buscarUsuario() {
+    const texto = document.getElementById("searchInput").value.toLowerCase();
+
+    const filtrados = usuarios.filter(u =>
+        u.nombre.toLowerCase().includes(texto) ||
+        u.apellido.toLowerCase().includes(texto) ||
+        u.correo.toLowerCase().includes(texto) ||
+        u.telefono.includes(texto)
+    );
+
+    mostrarTabla(filtrados);
+}
+
+
+// --------------------------
+//       AGREGAR
+// --------------------------
+function agregarUsuario() {
+    let nombre = prompt("Ingrese nombre:");
+    let apellido = prompt("Ingrese apellido:");
+    let correo = prompt("Ingrese correo:");
+    let telefono = prompt("Ingrese teléfono:");
+
+    if (!nombre || !apellido || !correo || !telefono) {
+        alert("Todos los campos son obligatorios");
+        return;
+    }
+
+    usuarios.push({nombre, apellido, correo, telefono});
+    mostrarTabla();
+}
+
+
+// --------------------------
+//       MODIFICAR
+// --------------------------
+function modificarUsuario(index) {
+    let u = usuarios[index];
+
+    let nombre = prompt("Modificar nombre:", u.nombre);
+    let apellido = prompt("Modificar apellido:", u.apellido);
+    let correo = prompt("Modificar correo:", u.correo);
+    let telefono = prompt("Modificar teléfono:", u.telefono);
+
+    if (!nombre || !apellido || !correo || !telefono) {
+        alert("Todos los campos son obligatorios");
+        return;
+    }
+
+    usuarios[index] = {nombre, apellido, correo, telefono};
+    mostrarTabla();
+}
+
+
+// --------------------------
+//       ELIMINAR
+// --------------------------
+function eliminarUsuario(index) {
+    if (confirm("¿Seguro que deseas eliminar este usuario?")) {
+        usuarios.splice(index, 1);
+        mostrarTabla();
+    }
+}
+</script>
+
+</body>
+</html>

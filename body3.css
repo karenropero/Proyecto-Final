@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+header {
+    background-image: url('imagenes/celulares.jpeg');
+    color:darkgreen;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 55px green;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff;
+}
+
+#search {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    width: 20em;
+}
+
+#search-btn {
+    background: blue;
+    background-color: #4CAF50;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 55px green;
+    color: white;
+    
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu>li {
+    position: relative;
+}
+
+#menu>li>a {
+    color:#fff;
+    text-decoration: none;
+}
+
+#menu>li>ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#menu>li:hover>ul {
+    display: block;
+}
+
+#menu>li>ul>li {
+    margin-bottom: 1em;
+}
+
+#menu>li>ul>li>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background-color:blue;
+}
+
+#products {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#products>li {
+    margin-bottom: 1em;
+}
+
+#products>li>a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+#productos-inicio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.producto {
+    width: 23%;
+    
+    margin: 10px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.producto p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: black;
+}
+button{
+    background-color: green;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px green, 0 0 30px green, 0 0 40px green, 0 0 55px green;
+}
+.inicio-btn {
+    display: inline-block;
+    background-color: #fff;
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+.inicio-btn img {
+    width: 80px;
+    height: 80px;
+}
+.boton-convertidor {
+    background-image: linear-gradient(to bottom, #B22234, #FFFFFF, #3C3B6E);
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.boton-convertidor:hover {
+    background-color: #3e8e41;
+}
+
+.boton-convertidor:active {
+    background-color: #3e8e41; 
+    box-shadow: 0 5px #666; 
+}
+
+#revertir-btn {
+    background-image: linear-gradient(to bottom, #FFD700, #FFFFFF, #0098D9);
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
