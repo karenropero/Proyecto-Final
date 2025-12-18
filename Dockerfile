@@ -4,6 +4,9 @@ LABEL maintainer="proyecto_web"
 # Limpiar contenido estático por defecto (asegura un directorio limpio)
 RUN rm -rf /usr/share/nginx/html/*
 
+# Copiar configuración personalizada de nginx
+COPY default.conf /etc/nginx/conf.d/default.conf
+
 # Copiar archivos del sitio
 COPY . /usr/share/nginx/html
 
