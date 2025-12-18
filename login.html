@@ -23,23 +23,22 @@
     <h2>Ingresa e inicia tu email</h2>
 
     <input type="email" placeholder="Ingresa tu email" id="email">
-
     <input type="password" placeholder="Ingresa tu contraseña" id="password">
 
-    <!-- BOTÓN FUNCIONAL QUE TE LLEVA A OTRA PÁGINA -->
-    <button class="btn-empresa" onclick="location.href='empresa.html'">
+
+    <button class="btn-empresa" onclick="loginEmpresa()">
         cuenta de empresa
     </button>
 
-    <button class="btn-enviar" onclick="handleLogin()">Enviar</button>
+    <button class="btn-enviar" onclick="handleLogin()">
+        Enviar
+    </button>
 
-    <p>¿No tienes una cuenta? <a href="#">registrarte aquí</a></p>
+    <p>¿No tienes una cuenta? <a href="registro.html">registrarte aquí</a></p>
 </div>
 
-</body>
-</html>
-
 <script>
+
 function handleLogin() {
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
@@ -49,8 +48,41 @@ function handleLogin() {
         return;
     }
 
-    // Inicio de sesión simulado: redirigir al CRUD
-    location.href = 'crud.html';
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    const usuarioEncontrado = usuarios.find(
+        u => u.email === email && u.password === password
+    );
+
+    if (usuarioEncontrado) {
+        alert('✅ Bienvenido ' + usuarioEncontrado.email);
+        window.location.href = 'index.html';
+    } else {
+        alert('❌ Usuario o contraseña incorrectos');
+    }
+}
+
+
+function loginEmpresa() {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    const EMAIL_EMPRESA = "yorgelyoumacou@gmail.com";
+    const PASSWORD_EMPRESA = "terminator1233t";
+
+    if (!email || !password) {
+        alert('Por favor ingresa email y contraseña');
+        return;
+    }
+
+    if (email === EMAIL_EMPRESA && password === PASSWORD_EMPRESA) {
+        alert('✅ Acceso empresa autorizado');
+        window.location.href = 'crud.html';
+    } else {
+        alert('❌ Acceso denegado');
+    }
 }
 </script>
 
+</body>
+</html>
